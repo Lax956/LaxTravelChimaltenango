@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lax Travel Chimaltenango</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+        .header {
+            padding: 20px;
+        }
+        .logo {
+            width: 100px;
+            border-radius: 50%;
+        }
+        .title {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .social-icons {
+            margin: 10px 0;
+        }
+        .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .button {
+            display: block;
+            margin: 15px auto;
+            width: 80%;
+            max-width: 300px;
+            padding: 15px;
+            font-size: 1.1em;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+        /* Estilo para los requisitos (ocultos inicialmente) */
+        .requisitos {
+            display: none;
+            background-color: #222;
+            color: white;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!-- Aquí agregas tu logo -->
+        <img src="imagenes/logo.jpeg" alt="Logo Lax" class="logo">
+        <h1 class="title">Lax Travel Chimaltenango</h1>
+        <p>Agencia de viajes</p>
+        <div class="social-icons">
+            <!-- Íconos de redes sociales con enlaces -->
+            <a href="https://wa.me/50244731696" target="_blank"><img src="imagenes/whatsapp.png" alt="WhatsApp"></a>
+            <a href="https://www.facebook.com/LaxTravelChimaltenango" target="_blank"><img src="imagenes/facebook.png" alt="Facebook"></a>
+        </div>
+    </div>
+    <div class="buttons">
+        <!-- Botón de los servicios -->
+        <button class="button" onclick="mostrarRequisitos()">Visa americana</button>
+        <button class="button" onclick="mostrarRequisitosVisaMexicana()">Visa mexicana</button>
+        <button class="button" onclick="mostrarRequisitosVisaCanadiense()">Visa canadiense</button>
+        <button class="button">Pasaporte Guatemalteco</button>
+        <button class="button">Pasaporte Americano</button>
+        <button class="button">Maletas</button>
+        <button class="button">Envíos a USA</button>
+    </div>
+
+    <!-- Contenedor de requisitos de Visa Americana -->
+    <div id="requisitosVisa" class="requisitos">
+        <h2>Requisitos para Renovación de Visa Americana</h2>
+        <ul>
+            <li>Pasaporte vigente</li>
+            <li>Fotografías para visa americana impresas (incluido)</li>
+            <li>Cuota de derecho a una visa Q1480 (tarjeta de crédito)</li>
+            <li>Dirección, número de teléfono y correo electrónico</li>
+            <li>Nombre completo y fecha de nacimiento del solicitante</li>
+            <li>Nombre, dirección y teléfono del contacto en Estados Unidos</li>
+            <li>Información de los padres del solicitante</li>
+            <li>Fecha de ingreso y egreso del empleo actual y anterior</li>
+            <li>Detalles de estudios básicos, diversificados, y universitarios (si aplica)</li>
+            <li>Cuenta de Facebook, Instagram (si tiene)</li>
+            <li><b>Costo del trámite:</b> Q340 (en efectivo) + Q3600 por adelanto de cita</li>
+        </ul>
+        <p><b>Nota:</b> Si tuvo rechazo en los últimos tres años, notifíquelo.</p>
+    </div>
+
+    <!-- Requisitos Visa Mexicana -->
+    <div id="requisitosVisaMexicana" class="requisitos">
+        <h2>Requisitos para Visa Mexicana</h2>
+        <ul>
+            <li>Pasaporte vigente</li>
+            <li>Formulario de solicitud completado</li>
+            <li>Comprobante de solvencia económica</li>
+            <li>Comprobante de residencia</li>
+        </ul>
+    </div>
+
+    <!-- Requisitos Visa Canadiense -->
+    <div id="requisitosVisaCanadiense" class="requisitos">
+        <h2>Requisitos para Visa Canadiense</h2>
+        <ul>
+            <li>Pasaporte vigente</li>
+            <li>Formulario de solicitud completado</li>
+            <li>Comprobante de solvencia económica</li>
+            <li>Pruebas de empleo o estudios</li>
+        </ul>
+    </div>
+
+    <script>
+        // Mostrar requisitos de visa americana
+        function mostrarRequisitos() {
+            const requisitosDiv = document.getElementById("requisitosVisa");
+            if (requisitosDiv.style.display === "none" || requisitosDiv.style.display === "") {
+                requisitosDiv.style.display = "block"; // Mostrar los requisitos de la visa americana
+            } else {
+                requisitosDiv.style.display = "none"; // Ocultar los requisitos de la visa americana
+            }
+        }
+
+        // Mostrar requisitos de visa mexicana
+        function mostrarRequisitosVisaMexicana() {
+            const requisitosDiv = document.getElementById("requisitosVisaMexicana");
+            if (requisitosDiv.style.display === "none" || requisitosDiv.style.display === "") {
+                requisitosDiv.style.display = "block"; // Mostrar los requisitos de la visa mexicana
+            } else {
+                requisitosDiv.style.display = "none"; // Ocultar los requisitos de la visa mexicana
+            }
+        }
+
+        // Mostrar requisitos de visa canadiense
+        function mostrarRequisitosVisaCanadiense() {
+            const requisitosDiv = document.getElementById("requisitosVisaCanadiense");
+            if (requisitosDiv.style.display === "none" || requisitosDiv.style.display === "") {
+                requisitosDiv.style.display = "block"; // Mostrar los requisitos de la visa canadiense
+            } else {
+                requisitosDiv.style.display = "none"; // Ocultar los requisitos de la visa canadiense
+            }
+        }
+    </script>
+</body>
+</html>
+
+
